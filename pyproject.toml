@@ -3,6 +3,7 @@ name = "isakovairat_brain_games"
 version = "0.1.0"
 description = ""
 authors = ["Airat Isakov <airat16353@gmail.com>"]
+license = "MIT"
 packages = [
     { include = "brain_games" },
   ]

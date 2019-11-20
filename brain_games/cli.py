@@ -2,10 +2,18 @@ import prompt
 
 
 def greet(name):
-    print("Hello, {}!".format(name))
+    print("Hello, {}!\n".format(name))
+
+
+def congrats(name):
+    print("Congratulations, {}!".format(name))
+
+
+def try_again(name):
+    print("Let's try again, {}!".format(name))
 
 
 def run():
-    print("Welcome to the Brain Games\n")
     name = prompt.string("May I have your name? ")
     greet(name)
+    return name

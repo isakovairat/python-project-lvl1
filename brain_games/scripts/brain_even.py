@@ -26,12 +26,12 @@ def questions(name):
             print("Correct!")
             count_correct += 1
         else:
-            print("{} is wrong answer ;(. Correct answer was {}".format(answer, opposite_answer(answer)))
+            print("\"{}\" is wrong answer ;(. ".format(answer), end="")
+            print("Correct answer was \"{}\"".format(opposite_answer(answer)))
             brain_games.cli.try_again(name)
             break
         if count_correct == 3:
             brain_games.cli.congrats(name)
-
 
 
 def main():

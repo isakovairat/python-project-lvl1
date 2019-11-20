@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "isakovairat_brain_games"
 version = "0.2.0"
-description = ""
+description = "First Hexlet project"
 authors = ["Airat Isakov <airat16353@gmail.com>"]
 license = "MIT"
 packages = [

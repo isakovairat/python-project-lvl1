@@ -8,9 +8,9 @@ First python project, which i've made studying at [Hexlet.io][hexlet]
 <img src="https://sun9-10.userapi.com/c9455/v9455736/1354/EqqWUGAnJbU.jpg" width=150>
 
 ## Table of contents
-1.[Brain-even game](#1-brain-even-game)
-2.[Brain-calc game](#2-brain-calc-game)
-3.[Brain-gcd game](#3-brain-gcd-game)
+- [Brain-even game](#1-brain-even-game)
+- [Brain-calc game](#2-brain-calc-game)
+- [Brain-gcd game](#3-brain-gcd-game)
 
 
 #### Brain-even game

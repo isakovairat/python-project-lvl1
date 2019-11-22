@@ -10,8 +10,7 @@ def is_correct_input(input_msg):
 
 def get_operation():
     operations = ["+", "-", "*"]
-    index = random.randint(0, 2)
-    return operations[index]
+    return random.choice(operations)
 
 
 def get_correct_answer(numb1, numb2, operation):

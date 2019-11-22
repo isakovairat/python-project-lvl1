@@ -22,7 +22,7 @@ def get_correct_answer(numb1, numb2, operation):
         return numb1 - numb2
 
 
-def try_again_msg(answer,correct_answer, name):
+def try_again_msg(answer, correct_answer, name):
     print("\'{}\' is wrong answer ;(. ".format(answer), end="")
     print("Correct answer was \'{}\'.".format(correct_answer))
     brain_games.cli.try_again(name)

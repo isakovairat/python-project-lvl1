@@ -7,6 +7,12 @@ First python project, which i've made studying at [Hexlet.io][hexlet]
 
 ## Usage
 
+### Brain-even game
+
+
 [![asciicast](https://asciinema.org/a/UywSgKUURgTdpCIPpauvABGjM.svg)](https://asciinema.org/a/UywSgKUURgTdpCIPpauvABGjM)
+
+### Brain-calc game
+[![asciicast](https://asciinema.org/a/XkAbAVIF1hTiJcFrYyZz372bR.svg)](https://asciinema.org/a/XkAbAVIF1hTiJcFrYyZz372bR)
 
 [hexlet]: hexlet.io

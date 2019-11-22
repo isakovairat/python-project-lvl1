@@ -5,7 +5,8 @@
 
 First python project, which i've made studying at [Hexlet.io][hexlet]
 
-##Usage
-[![asciicast](https://asciinema.org/a/5hOY5H70vnY0hSWUM5k9yDqzh.svg)](https://asciinema.org/a/5hOY5H70vnY0hSWUM5k9yDqzh)
+## Usage
+
+[![asciicast](https://asciinema.org/a/UywSgKUURgTdpCIPpauvABGjM.svg)](https://asciinema.org/a/UywSgKUURgTdpCIPpauvABGjM)
 
 [hexlet]: hexlet.io

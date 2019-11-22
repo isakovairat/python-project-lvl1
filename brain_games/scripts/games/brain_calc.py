@@ -4,10 +4,6 @@ import random
 ROUNDS = 3
 
 
-def is_correct_input(input_msg):
-    return type(input_msg) == int
-
-
 def get_operation():
     operations = ["+", "-", "*"]
     return random.choice(operations)

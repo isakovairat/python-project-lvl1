@@ -1,8 +1,6 @@
 import brain_games.cli
 import random
 
-ROUNDS = 3
-
 
 def is_even(number):
     return number % 2 == 0
@@ -17,7 +15,7 @@ def opposite_answer(answer):
 
 def questions(name):
     count_correct = 0
-    while count_correct != ROUNDS:
+    while count_correct != brain_games.cli.ROUNDS:
         number = random.randint(0, 100)
         print("Question: {}".format(number))
         answer = input("Your answer: ")
@@ -37,7 +35,7 @@ def questions(name):
 
 
 def main():
-    print("Welcome to the Brain Games")
+    brain_games.cli.welcome()
     print("Answer \"yes\" if number even otherwise answer \"no\".\n")
     name = brain_games.cli.run()
     questions(name)

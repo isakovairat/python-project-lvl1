@@ -1,8 +1,5 @@
 import brain_games.cli
 import random
-from math import gcd
-
-ROUNDS = 3
 
 
 def get_hidden_position():
@@ -31,7 +28,7 @@ def print_ap(start, step):
 
 def play_progression(name):
     count_correct = 0
-    while count_correct != ROUNDS:
+    while count_correct != brain_games.cli.ROUNDS:
         start = random.randint(0, 100)
         step = random.randint(0, 20)
         print("Question:", end=' ')
@@ -51,7 +48,7 @@ def play_progression(name):
 
 
 def main():
-    print("Welcome to the Brain Games")
+    brain_games.cli.welcome()
     print("What number is missing in the progression?\n")
     name = brain_games.cli.run()
     play_progression(name)

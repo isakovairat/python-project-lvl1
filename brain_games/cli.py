@@ -1,5 +1,7 @@
 import prompt
 
+ROUNDS = 3
+
 
 def greet(name):
     print("Hello, {}!\n".format(name))
@@ -11,6 +13,10 @@ def congrats(name):
 
 def try_again(name):
     print("Let's try again, {}!".format(name))
+
+
+def welcome():
+    print("Welcome to the Brain Games")
 
 
 def run():

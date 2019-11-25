@@ -2,8 +2,6 @@ import brain_games.cli
 import random
 from math import gcd
 
-ROUNDS = 3
-
 
 def try_again_msg(answer, correct_answer, name):
     print("\'{}\' is wrong answer ;(. ".format(answer), end="")
@@ -13,7 +11,7 @@ def try_again_msg(answer, correct_answer, name):
 
 def play_gcd(name):
     count_correct = 0
-    while count_correct != ROUNDS:
+    while count_correct != brain_games.cli.ROUNDS:
         number1 = random.randint(0, 100)
         number2 = random.randint(0, 100)
         correct_answer = gcd(number1, number2)
@@ -33,7 +31,7 @@ def play_gcd(name):
 
 
 def main():
-    print("Welcome to the Brain Games")
+    brain_games.cli.welcome()
     print("Find the greatest common divisor of given numbers.\n")
     name = brain_games.cli.run()
     play_gcd(name)

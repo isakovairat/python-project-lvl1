@@ -1,8 +1,6 @@
 import brain_games.cli
 import random
 
-ROUNDS = 3
-
 
 def get_operation():
     operations = ["+", "-", "*"]
@@ -26,7 +24,7 @@ def try_again_msg(answer, correct_answer, name):
 
 def calc(name):
     count_correct = 0
-    while count_correct != ROUNDS:
+    while count_correct != brain_games.cli.ROUNDS:
         number1 = random.randint(0, 100)
         number2 = random.randint(0, 100)
         operation = get_operation()
@@ -47,7 +45,7 @@ def calc(name):
 
 
 def main():
-    print("Welcome to the Brain Games")
+    brain_games.cli.welcome()
     print("What is the result of the expression?\n")
     name = brain_games.cli.run()
     calc(name)

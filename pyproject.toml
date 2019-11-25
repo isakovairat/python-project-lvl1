@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "isakovairat_brain_games"
-version = "0.6.0"
+version = "0.6.1"
 description = "Brain games - various of games, where you can train you brain skills on different easy tasks"
 license = "MIT"
 authors = ["Airat Isakov <airat16353@gmail.com>"]

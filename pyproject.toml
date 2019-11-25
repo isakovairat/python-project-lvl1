@@ -1,9 +1,22 @@
 [tool.poetry]
 name = "isakovairat_brain_games"
 version = "0.6.0"
-description = "First Hexlet project"
-authors = ["Airat Isakov <airat16353@gmail.com>"]
+description = "Brain games - various of games, where you can train you brain skills on different easy tasks"
 license = "MIT"
+authors = ["Airat Isakov <airat16353@gmail.com>"]
+readme = "README.md"
+homepage = "https://test.pypi.org/project/isakovairat-brain-games/"
+repository = "https://github.com/isakovairat/python-project-lvl1"
+classifiers = [
+    "Development Status :: 6 - Mature",
+    "Environment :: Console",
+    "Environment :: MacOS X",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Programming Language :: Python",
+    "Topic :: Games/Entertainment"
+]
 packages = [
     { include = "brain_games" },
   ]

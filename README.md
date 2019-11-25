@@ -12,7 +12,7 @@ First python project, which i've made studying at [Hexlet.io][hexlet]
 - [Brain-calc game](#2-brain-calc-game)
 - [Brain-gcd game](#3-brain-gcd-game)
 - [Brain-progression game](#4-brain-progression-game)
-
+- [Brain-prime game](#5-brain-prime-game)
 
 #### Brain-even game
 The essence of the game is the following: the user is shown a random number. And he needs to answer 'yes' if the number is even, or 'no' if it is odd:
@@ -29,5 +29,9 @@ The essence of the game is the following: the user is shown two random numbers, 
 #### Brain-progression game
 The goal of the game is to show the player a series of numbers that form an arithmetic progression, replacing any of the numbers with two points. The player must determine this number.
 [![asciicast](https://asciinema.org/a/ask77gS6UuQmVx2zkcZQhGv0k.svg)](https://asciinema.org/a/ask77gS6UuQmVx2zkcZQhGv0k)
+
+#### Brain-prime game
+The goal of the game is to define a prime number.
+[![asciicast](https://asciinema.org/a/o15aW4prKCY7QPxGdMytV93LO.svg)](https://asciinema.org/a/o15aW4prKCY7QPxGdMytV93LO)
 
 [hexlet]: hexlet.io

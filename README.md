@@ -11,6 +11,7 @@ First python project, which i've made studying at [Hexlet.io][hexlet]
 - [Brain-even game](#1-brain-even-game)
 - [Brain-calc game](#2-brain-calc-game)
 - [Brain-gcd game](#3-brain-gcd-game)
+- [Brain-progression game](#4-brain-progression-game)
 
 
 #### Brain-even game
@@ -24,5 +25,9 @@ The essence of the game is as follows: the user is shown a random mathematical e
 #### Brain-gcd game
 The essence of the game is the following: the user is shown two random numbers, for example, 25 50. The user must calculate and enter the largest common divider of these numbers.
 [![asciicast](https://asciinema.org/a/XhJV6771KeEEX2FJDJsjXrpUj.svg)](https://asciinema.org/a/XhJV6771KeEEX2FJDJsjXrpUj)
+
+#### Brain-progression game
+The goal of the game is to show the player a series of numbers that form an arithmetic progression, replacing any of the numbers with two points. The player must determine this number.
+[![asciicast](https://asciinema.org/a/ask77gS6UuQmVx2zkcZQhGv0k.svg)](https://asciinema.org/a/ask77gS6UuQmVx2zkcZQhGv0k)
 
 [hexlet]: hexlet.io

@@ -2,8 +2,6 @@
 from brain_games.engine import run
 from brain_games.games import brain_gcd
 
-"""Brain-gcd"""
-
 
 def main():
     run(brain_gcd)

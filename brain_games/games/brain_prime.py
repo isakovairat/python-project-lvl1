@@ -1,21 +1,17 @@
 #!/usr/bin/env python3
 from brain_games.engine import generate_random_number
+from math import sqrt
+from itertools import count, islice
 DESCRIPTION = "Answer \"yes\" if given number is prime. " \
               "Otherwise answer \"no\"."
 
 
 def is_prime(n):
-    if n <= 1:
+    if n < 2:
         return "no"
-    if n <= 3:
-        return "no"
-    if n % 2 == 0 or n % 3 == 0:
-        return "no"
-    i = 5
-    while i * i <= n:
-        if n % i == 0 or n % (i + 2) == 0:
+    for number in islice(count(2), int(sqrt(n) - 1)):
+        if n % number == 0:
             return "no"
-        i = i + 6
     return "yes"
 
 

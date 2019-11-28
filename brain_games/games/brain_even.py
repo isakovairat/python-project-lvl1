@@ -1,46 +1,14 @@
 #!/usr/bin/env python3
-import brain_games.cli
-import random
+from brain_games.engine import generate_random_number
+DESCRIPTION = 'Answer "yes" if number even otherwise answer "no".'
 
 
-def is_even(number):
-    return number % 2 == 0
+def get_correct_answer(number):
+    return "no" if number % 2 else "yes"
 
 
-def opposite_answer(answer):
-    if answer == "yes":
-        return "no"
-    else:
-        return "yes"
-
-
-def questions(name):
-    count_correct = 0
-    while count_correct != brain_games.cli.ROUNDS:
-        number = random.randint(0, 100)
-        print("Question: {}".format(number))
-        answer = input("Your answer: ")
-        if answer == "yes" and is_even(number):
-            print("Correct!")
-            count_correct += 1
-        elif answer == "no" and not is_even(number):
-            print("Correct!")
-            count_correct += 1
-        else:
-            print("\"{}\" is wrong answer ;(. ".format(answer), end="")
-            print("Correct answer was \"{}\"".format(opposite_answer(answer)))
-            brain_games.cli.try_again(name)
-            break
-        if count_correct == 3:
-            brain_games.cli.congrats(name)
-
-
-def main():
-    brain_games.cli.welcome()
-    print("Answer \"yes\" if number even otherwise answer \"no\".\n")
-    name = brain_games.cli.run()
-    questions(name)
-
-
-if __name__ == '__main__':
-    main()
+def ask_question():
+    number = generate_random_number()
+    answer = get_correct_answer(number)
+    question = f"Question: {number}"
+    return question, answer

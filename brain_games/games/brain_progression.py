@@ -1,59 +1,25 @@
 #!/usr/bin/env python3
-import brain_games.cli
-import random
+from brain_games.engine import generate_random_number
+DESCRIPTION = "What number is missing in the progression?"
 
 
-def get_hidden_position():
-    return random.randint(0, 9)
-
-
-def try_again_msg(answer, correct_answer, name):
-    print("\'{}\' is wrong answer ;(. ".format(answer), end="")
-    print("Correct answer was \'{}\'.".format(correct_answer))
-    brain_games.cli.try_again(name)
-
-
-def print_ap(start, step):
-    curr_term = start
-    hidden = get_hidden_position()
+def make_progression(start, step):
+    hidden_index = generate_random_number(0, 9)
+    result = str()
+    answer = 0
     for i in range(0, 10):
-        if i == hidden:
-            print('..', end=' ')
-            hidden = curr_term
+        if i == hidden_index:
+            result += ".. "
+            answer = str(start)
         else:
-            print(curr_term, end=' ')
-        curr_term += step
-    print()
-    return hidden
+            result += str(start) + " "
+        start += step
+    return answer, result
 
 
-def play_progression(name):
-    count_correct = 0
-    while count_correct != brain_games.cli.ROUNDS:
-        start = random.randint(0, 100)
-        step = random.randint(0, 20)
-        print("Question:", end=' ')
-        correct_answer = print_ap(start, step)
-        input_msg = input("Your answer: ")
-        try:
-            answer = int(input_msg)
-        except ValueError:
-            try_again_msg(input_msg, correct_answer, name)
-            break
-        if correct_answer == answer:
-            count_correct += 1
-            brain_games.cli.congrats(name)
-        else:
-            try_again_msg(answer, correct_answer, name)
-            break
-
-
-def main():
-    brain_games.cli.welcome()
-    print("What number is missing in the progression?\n")
-    name = brain_games.cli.run()
-    play_progression(name)
-
-
-if __name__ == '__main__':
-    main()
+def ask_question():
+    start = generate_random_number()
+    step = generate_random_number(1, 10)
+    answer, message = make_progression(start, step)
+    question = "Question: {}".format(message)
+    return question, answer

@@ -1,26 +1,12 @@
 #!/usr/bin/env python3
 import prompt
 
-ROUNDS = 3
+
+def get_user_name():
+    user = prompt.string("May I have your name? ")
+    return user
 
 
-def greet(name):
-    print("Hello, {}!\n".format(name))
-
-
-def congrats(name):
-    print("Congratulations, {}!".format(name))
-
-
-def try_again(name):
-    print("Let's try again, {}!".format(name))
-
-
-def welcome():
-    print("Welcome to the Brain Games")
-
-
-def run():
-    name = prompt.string("May I have your name? ")
-    greet(name)
-    return name
+def get_user_answer():
+    answer = prompt.string("Your answer: ")
+    return answer

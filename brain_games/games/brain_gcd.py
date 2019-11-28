@@ -1,42 +1,16 @@
 #!/usr/bin/env python3
-import brain_games.cli
-import random
+from brain_games.engine import generate_random_number
 from math import gcd
+DESCRIPTION = "Find the greatest common divisor of given numbers."
 
 
-def try_again_msg(answer, correct_answer, name):
-    print("\'{}\' is wrong answer ;(. ".format(answer), end="")
-    print("Correct answer was \'{}\'.".format(correct_answer))
-    brain_games.cli.try_again(name)
+def get_correct_answer(number1, number2):
+    return str(gcd(number1, number2))
 
 
-def play_gcd(name):
-    count_correct = 0
-    while count_correct != brain_games.cli.ROUNDS:
-        number1 = random.randint(0, 100)
-        number2 = random.randint(0, 100)
-        correct_answer = gcd(number1, number2)
-        print("Question: {} {}".format(number1, number2))
-        input_msg = input("Your answer: ")
-        try:
-            answer = int(input_msg)
-        except ValueError:
-            try_again_msg(input_msg, correct_answer, name)
-            break
-        if correct_answer == answer:
-            count_correct += 1
-            brain_games.cli.congrats(name)
-        else:
-            try_again_msg(answer, correct_answer, name)
-            break
-
-
-def main():
-    brain_games.cli.welcome()
-    print("Find the greatest common divisor of given numbers.\n")
-    name = brain_games.cli.run()
-    play_gcd(name)
-
-
-if __name__ == '__main__':
-    main()
+def ask_question():
+    number1 = generate_random_number()
+    number2 = generate_random_number()
+    question = "Question: {} {}".format(number1, number2)
+    answer = get_correct_answer(number1, number2)
+    return question, answer

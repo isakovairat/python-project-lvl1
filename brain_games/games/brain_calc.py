@@ -1,56 +1,27 @@
 #!/usr/bin/env python3
-import brain_games.cli
-import random
+from brain_games.engine import generate_random_number
+from random import choice
+DESCRIPTION = "What is the result of the expression?"
 
 
 def get_operation():
     operations = ["+", "-", "*"]
-    return random.choice(operations)
+    return choice(operations)
 
 
-def get_correct_answer(numb1, numb2, operation):
+def get_correct_answer(number1, number2, operation):
+    if operation == "+":
+        return str(number1 + number2)
+    if operation == "-":
+        return str(number1 - number2)
     if operation == "*":
-        return numb1 * numb2
-    elif operation == "+":
-        return numb1 + numb2
-    elif operation == "-":
-        return numb1 - numb2
+        return str(number1 * number2)
 
 
-def try_again_msg(answer, correct_answer, name):
-    print("\'{}\' is wrong answer ;(. ".format(answer), end="")
-    print("Correct answer was \'{}\'.".format(correct_answer))
-    brain_games.cli.try_again(name)
-
-
-def calc(name):
-    count_correct = 0
-    while count_correct != brain_games.cli.ROUNDS:
-        number1 = random.randint(0, 100)
-        number2 = random.randint(0, 100)
-        operation = get_operation()
-        correct_answer = get_correct_answer(number1, number2, operation)
-        print("Question: {} {} {}".format(number1, operation, number2))
-        input_msg = input("Your answer: ")
-        try:
-            answer = int(input_msg)
-        except ValueError:
-            try_again_msg(input_msg, correct_answer, name)
-            break
-        if correct_answer == answer:
-            count_correct += 1
-            brain_games.cli.congrats(name)
-        else:
-            try_again_msg(answer, correct_answer, name)
-            break
-
-
-def main():
-    brain_games.cli.welcome()
-    print("What is the result of the expression?\n")
-    name = brain_games.cli.run()
-    calc(name)
-
-
-if __name__ == '__main__':
-    main()
+def ask_question():
+    number1 = generate_random_number()
+    number2 = generate_random_number()
+    operation = get_operation()
+    question = "Question: {} {} {}".format(number1, operation, number2)
+    answer = get_correct_answer(number1, number2, operation)
+    return question, answer

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "isakovairat_brain_games"
-version = "0.6.1"
+version = "0.7.0"
 description = "Brain games - various of games, where you can train you brain skills on different easy tasks"
 license = "MIT"
 authors = ["Airat Isakov <airat16353@gmail.com>"]
@@ -30,11 +30,11 @@ flake8 = "^3.7"
 
 [tool.poetry.scripts]
 brain-games = "brain_games.scripts.brain_games:main"
-brain-even = "brain_games.scripts.games.brain_even:main"
-brain-calc = "brain_games.scripts.games.brain_calc:main"
-brain-gcd = "brain_games.scripts.games.brain_gcd:main"
-brain-progression = "brain_games.scripts.games.brain_progression:main"
-brain-prime = "brain_games.scripts.games.brain_prime:main"
+brain-even = "brain_games.scripts.brain_even:main"
+brain-calc = "brain_games.scripts.brain_calc:main"
+brain-gcd = "brain_games.scripts.brain_gcd:main"
+brain-progression = "brain_games.scripts.brain_progression:main"
+brain-prime = "brain_games.scripts.brain_prime:main"
 
 [build-system]
 requires = ["poetry>=0.12"]

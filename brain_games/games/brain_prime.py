@@ -8,7 +8,7 @@ DESCRIPTION = "Answer \"yes\" if given number is prime. " \
 
 
 def is_prime(n):
-    if n < 2 or (n % 2 == 0 and n is not 2):
+    if n < 2 or (n % 2 == 0 and n != 2):
         return "no"
     for number in islice(count(2), int(sqrt(n) - 1)):
         if n % number == 0:

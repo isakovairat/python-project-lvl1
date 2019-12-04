@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 from brain_games.engine import generate_random_number
+
 DESCRIPTION = 'Answer "yes" if number even otherwise answer "no".'
 
 

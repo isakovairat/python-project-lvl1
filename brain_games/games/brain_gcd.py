@@ -1,7 +1,17 @@
 #!/usr/bin/env python3
 from brain_games.engine import generate_random_number
-from math import gcd
+
 DESCRIPTION = "Find the greatest common divisor of given numbers."
+
+
+def gcd(number1, number2):
+    rest = number1 % number2
+    if rest == 0:
+        return number1
+    elif rest == 1:
+        return 1
+    else:
+        return gcd(number2, rest)
 
 
 def get_correct_answer(number1, number2):

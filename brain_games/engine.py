@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from random import randint
 from brain_games.cli import get_user_name, get_user_answer
 
@@ -27,25 +26,22 @@ def welcome():
     return user
 
 
-def run(game=None):
+def play_the_game(game=None):
     greet()
     if game:
-        print(game.DESCRIPTION, "\n")
+        print(game.DESCRIPTION)
+        print()
         user = welcome()
         print()
-        engine(user, game.ask_question)
-
-
-def engine(user, play_question):
-    correct_answers = 0
-    while correct_answers < ROUNDS:
-        question, correct_answer = play_question()
-        print(question)
-        result, message = check(get_user_answer(), correct_answer)
-        print(message)
-        if result:
-            correct_answers += 1
-        else:
-            print("Let\'s try again, {}!".format(user))
-            return
-    print("Congratulations, {}!".format(user))
+        correct_answers = 0
+        while correct_answers < ROUNDS:
+            question, correct_answer = game.ask_question()
+            print(question)
+            result, message = check(get_user_answer(), correct_answer)
+            print(message)
+            if not result:
+                print("Let\'s try again, {}!".format(user))
+                return
+            else:
+                correct_answers += 1
+        print("Congratulations, {}!".format(user))

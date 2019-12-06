@@ -4,12 +4,8 @@ from brain_games.engine import generate_random_number
 DESCRIPTION = 'Answer "yes" if number even otherwise answer "no".'
 
 
-def get_correct_answer(number):
-    return "no" if number % 2 else "yes"
-
-
 def ask_question():
     number = generate_random_number()
-    answer = get_correct_answer(number)
+    answer = "no" if number % 2 else "yes"
     question = f"Question: {number}"
     return question, answer

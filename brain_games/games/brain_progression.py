@@ -6,15 +6,14 @@ DESCRIPTION = "What number is missing in the progression?"
 
 def make_progression(start, step):
     hidden_index = generate_random_number(0, 9)
-    result = str()
-    answer = 0
+    answer, result, member = 0, "", start
     for i in range(0, 10):
         if i == hidden_index:
             result += ".. "
-            answer = str(start)
+            answer = str(member)
         else:
-            result += str(start) + " "
-        start += step
+            result += str(member) + " "
+        member += step
     return answer, result
 
 

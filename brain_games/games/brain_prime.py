@@ -9,15 +9,15 @@ DESCRIPTION = "Answer \"yes\" if given number is prime. " \
 
 def is_prime(n):
     if n < 2 or (n % 2 == 0 and n != 2):
-        return "no"
+        return False
     for number in islice(count(2), int(sqrt(n) - 1)):
         if n % number == 0:
-            return "no"
-    return "yes"
+            return False
+    return True
 
 
 def ask_question():
     number = generate_random_number()
     question = "Question: {}".format(number)
-    answer = is_prime(number)
+    answer = "yes" if is_prime(number) else "no"
     return question, answer

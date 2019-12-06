@@ -5,25 +5,28 @@ from operator import add, mul, sub
 
 DESCRIPTION = "What is the result of the expression?"
 
-operations = {
-        "+": add,
-        "-": sub,
-        "*": mul
-    }
+operations = [
+    ("+", add),
+    ("-", sub),
+    ("*", mul)
+]
 
 
 def get_operation():
-    return choice(list(operations.keys()))
+    # return random tuple from operations array, which contains (string, <built-in func>)
+    return choice(list(operations))
 
 
 def get_correct_answer(number1, number2, operation):
-    return str(operations[operation](number1, number2))
+    # operation[1] is one of add or mul or sub built-in functions
+    return str(operation[1](number1, number2))
 
 
 def ask_question():
     number1 = generate_random_number()
     number2 = generate_random_number()
     operation = get_operation()
-    question = "Question: {} {} {}".format(number1, operation, number2)
+    # operation[0] is "+" or "-" or "*"
+    question = "Question: {} {} {}".format(number1, operation[0], number2)
     answer = get_correct_answer(number1, number2, operation)
     return question, answer

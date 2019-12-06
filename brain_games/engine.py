@@ -35,7 +35,8 @@ def play_the_game(game=None):
             result, message = True, "Correct!"
         else:
             message = "'{}' is wrong answer ;(. Correct answer was '{}'."
-            result, message =  False, message.format(user_answer, correct_answer)
+            message = message.format(user_answer, correct_answer)
+            result = False
         print(message)
         if not result:
             print("Let\'s try again, {}!".format(user))

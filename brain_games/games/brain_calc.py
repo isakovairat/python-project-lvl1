@@ -13,7 +13,8 @@ operations = [
 
 
 def get_operation():
-    # return random tuple from operations array, which contains (string, <built-in func>)
+    # return random tuple from operations array,
+    # which contains (string, <built-in func>)
     return choice(list(operations))
 
 
